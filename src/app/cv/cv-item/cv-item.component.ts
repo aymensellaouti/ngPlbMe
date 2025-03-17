@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cv } from '../model/cv.model';
 
 @Component({
@@ -10,4 +10,11 @@ export class CvItemComponent {
   // Je défini mon state ce que ma vue gére
   @Input({required: true})
   cv!: Cv;
+
+  @Output()
+  selectCv = new EventEmitter<Cv>();
+
+  onSelectCv() {
+    this.selectCv.emit(this.cv);
+  }
 }
