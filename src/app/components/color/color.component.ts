@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent {
+  // Quels propriété je dois avoir pour gérer ma vue
+  defaultColor = 'red';
+  /**
+   * Représente la couleur du background
+   */
+  bgColor = this.defaultColor;
 
+  // Changer la couleur du background
+  changeColor(color: string) {
+    this.bgColor = color;
+  }
+
+  reset() {
+    this.bgColor = this.defaultColor;
+  }
 }

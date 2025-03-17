@@ -1,5 +1,12 @@
-<div>color works!</div>
+<div #uneDiv [style.backgroundColor]="bgColor">color works!</div>
 
-<input type="text" class="form-control">
+<input
+  #colorInput
+  (change)="changeColor(colorInput.value)"
+  type="text"
+  class="form-control">
 
-<button class="btn btn-danger">reset</button>
+<button (click)="reset()" class="btn btn-danger">
+  reset to {{defaultColor}}
+</button>
+
