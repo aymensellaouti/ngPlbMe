@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-fils',
@@ -8,4 +8,13 @@ import { Component, Input } from '@angular/core';
 export class FilsComponent {
   @Input()
   messageDePapa = "je n'ai pas encore reçu de message";
+
+  // créer un event customisé et on l'emmetra au besoin avec la
+  // data
+  @Output()
+  sendMessageToDad = new EventEmitter<string>();
+
+  sendMessage() {
+    this.sendMessageToDad.emit('salut papa tout va très bien');
+  }
 }

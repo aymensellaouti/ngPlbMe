@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-somme',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./somme.component.css']
 })
 export class SommeComponent {
+  @Input({required:true})
   x = 0;
+  @Input()
   y = 0;
 }
