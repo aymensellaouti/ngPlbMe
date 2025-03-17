@@ -12,6 +12,10 @@ import { RotatingCardComponent } from './components/rotating-card/rotating-card.
 import { PereComponent } from './communicationInterComposants/pere/pere.component';
 import { FilsComponent } from './communicationInterComposants/fils/fils.component';
 import { SommeComponent } from './communicationInterComposants/somme/somme.component';
+import { CvComponent } from './cv/cv/cv.component';
+import { CvListComponent } from './cv/cv-list/cv-list.component';
+import { CvItemComponent } from './cv/cv-item/cv-item.component';
+import { CvCardComponent } from './cv/cv-card/cv-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { SommeComponent } from './communicationInterComposants/somme/somme.compo
     RotatingCardComponent,
     PereComponent,
     FilsComponent,
-    SommeComponent
+    SommeComponent,
+    CvComponent,
+    CvListComponent,
+    CvItemComponent,
+    CvCardComponent
   ],
   imports: [
     BrowserModule,
