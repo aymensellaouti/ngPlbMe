@@ -16,3 +16,5 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// @ => Métas données => données de description qui vont aider le compilateur à savoir quoi faire
