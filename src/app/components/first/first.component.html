@@ -1,0 +1,10 @@
+<!-- attributs: l'état de la balise -->
+<p [hidden]="isHidden"> {{name}} works!</p>
+<!-- Au click appelle la fonction showHide -->
+<div (click)="showHide()" class="alert alert-info">
+  <app-second />
+</div>
+<p>Le contenu de l'input est : {{ message }}</p>
+<input #monInput (change)="changeMessage(monInput.value)" type="text" class="form-control">
+<!-- evenement: Comportement behaviour
+  à nos balises -->
