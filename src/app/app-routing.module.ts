@@ -7,16 +7,19 @@ import { ColorComponent } from './components/color/color.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { SecondComponent } from './components/second/second.component';
 import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
+import { NF404Component } from './components/nf404/nf404.component';
 // cv
 const routes: Routes = [
-  { path: '', component: FirstComponent},
+  // { path: '**', component: NF404Component },
+  { path: '', component: FirstComponent },
   // :quelqueChose => je match toute route composé d'un segment
-  { path: 'cv', component: CvComponent},
-  { path: 'todo', component: TodoComponent},
-  { path: 'color', component: ColorComponent},
-  { path: 'word', component: MiniWordComponent},
-  { path: 'cv/:id', component: DetailsCvComponent},
-  { path: ':quelquechose/:name', component: SecondComponent},
+  { path: 'cv', component: CvComponent },
+  { path: 'todo', component: TodoComponent },
+  { path: 'color', component: ColorComponent },
+  { path: 'word', component: MiniWordComponent },
+  { path: 'cv/:id', component: DetailsCvComponent },
+  { path: ':quelquechose/:name', component: SecondComponent },
+  { path: '**', component: NF404Component },
 ];
 
 @NgModule({

@@ -32,6 +32,7 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipe/default-image.pipe';
 import { SayHelloService } from './services/say-hello.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     RainbowDirective,
     DefaultImagePipe,
     NavbarComponent,
+    NF404Component,
   ],
   imports: [
     BrowserModule,
