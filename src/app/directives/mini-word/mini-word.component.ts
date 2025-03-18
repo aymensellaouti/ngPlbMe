@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./mini-word.component.css']
 })
 export class MiniWordComponent {
-
+  // conseil 1 : utilisez ngStyle
+  // conseil 2 : utilisez [(ngModel)]
 }

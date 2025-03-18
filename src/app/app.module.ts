@@ -20,6 +20,8 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 import { TodoComponent } from './todo/todo/todo.component';
 import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
+import { ExempleNgStyleComponent } from './directives/exemple-ng-style/exemple-ng-style.component';
+import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
     EmbaucheComponent,
     DetailsCvComponent,
     TodoComponent,
-    WeekTodoComponent
+    WeekTodoComponent,
+    ExempleNgStyleComponent,
+    MiniWordComponent
   ],
   imports: [
     BrowserModule,
