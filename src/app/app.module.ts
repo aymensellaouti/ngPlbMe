@@ -16,6 +16,10 @@ import { CvComponent } from './cv/cv/cv.component';
 import { CvListComponent } from './cv/cv-list/cv-list.component';
 import { CvItemComponent } from './cv/cv-item/cv-item.component';
 import { CvCardComponent } from './cv/cv-card/cv-card.component';
+import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
+import { TodoComponent } from './todo/todo/todo.component';
+import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { CvCardComponent } from './cv/cv-card/cv-card.component';
     CvComponent,
     CvListComponent,
     CvItemComponent,
-    CvCardComponent
+    CvCardComponent,
+    EmbaucheComponent,
+    DetailsCvComponent,
+    TodoComponent,
+    WeekTodoComponent
   ],
   imports: [
     BrowserModule,
