@@ -31,6 +31,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipe/default-image.pipe';
 import { SayHelloService } from './services/say-hello.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SayHelloService } from './services/say-hello.service';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
