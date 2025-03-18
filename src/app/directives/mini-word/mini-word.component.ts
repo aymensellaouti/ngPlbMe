@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class MiniWordComponent {
   // conseil 1 : utilisez ngStyle
   // conseil 2 : utilisez [(ngModel)]
+  // La définition de notre état
+  color = 'red';
+  size = 75;
+  police = 'garamond';
+
 }
