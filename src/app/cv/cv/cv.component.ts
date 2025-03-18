@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Cv } from '../model/cv.model';
 import { LoggerService } from 'src/app/services/logger.service';
 import { SayHelloService } from 'src/app/services/say-hello.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cv',
@@ -11,6 +12,7 @@ import { SayHelloService } from 'src/app/services/say-hello.service';
 })
 export class CvComponent {
   today = new Date();
+  toastr= inject(ToastrService);
   cvs: Cv[] = [
     new Cv(1, 'Raux', 'Florian', 'Dev', '1234', 20, ''),
     new Cv(2, 'Penhoat', 'Christine', 'Dev', '12345', 20, '    '),
@@ -27,12 +29,13 @@ export class CvComponent {
   loggerService = inject(LoggerService);
   //  Donne moi le sayHelloService
   sayHelloService = inject(SayHelloService);
+
   //sayHelloService = new SayHelloService();
-  constructor() // Donne moi le LoggerService
-  //private loggerService: LoggerService
+  constructor() //private loggerService: LoggerService // Donne moi le LoggerService
   {
     this.sayHelloService.hello();
     this.loggerService.logger('cc je suis le cv Component');
+    this.toastr.success('Bienvenu dans notre cvTech')
   }
   /**
    * Représente le cv sélectionné
