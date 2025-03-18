@@ -6,6 +6,7 @@ import { TodoComponent } from './todo/todo/todo.component';
 import { ColorComponent } from './components/color/color.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { SecondComponent } from './components/second/second.component';
+import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 // cv
 const routes: Routes = [
   { path: '', component: FirstComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'todo', component: TodoComponent},
   { path: 'color', component: ColorComponent},
   { path: 'word', component: MiniWordComponent},
+  { path: 'cv/:id', component: DetailsCvComponent},
   { path: ':quelquechose/:name', component: SecondComponent},
 ];
 

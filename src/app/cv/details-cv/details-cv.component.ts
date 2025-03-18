@@ -12,8 +12,8 @@ export class DetailsCvComponent {
   constructor() {}
   /*
   Todos :
-  0- Défnir la route associé à ce composant
-  01- Préparer les méthodes dans le service
+  0- Défnir la route associé à ce composant (done)
+  01- Préparer les méthodes dans le service (done)
   /cv/4
   1- Récupérer le paramètre
   2- On doit aller voir le cvService pour qu'il nous cherche le cv via son id
