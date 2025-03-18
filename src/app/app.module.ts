@@ -25,6 +25,7 @@ import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { ExempleNgClassComponent } from './directives/exemple-ng-class/exemple-ng-class.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './pipe/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
     MiniWordComponent,
     ExempleNgClassComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,

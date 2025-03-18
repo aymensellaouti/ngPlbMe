@@ -7,6 +7,7 @@ import { Cv } from '../model/cv.model';
   styleUrls: ['./cv.component.css'],
 })
 export class CvComponent {
+  today = new Date();
   cvs: Cv[] = [
     new Cv(
       1,
@@ -15,7 +16,7 @@ export class CvComponent {
       'Dev',
       '1234',
       20,
-      'rotating_card_profile3.png'
+      ''
     ),
     new Cv(
       2,
@@ -24,7 +25,7 @@ export class CvComponent {
       'Dev',
       '12345',
       20,
-      'rotating_card_profile.png'
+      '    '
     ),new Cv(
       3,
       'Lacquehay',
