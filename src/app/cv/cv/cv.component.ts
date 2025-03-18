@@ -25,6 +25,14 @@ export class CvComponent {
       '12345',
       20,
       'rotating_card_profile.png'
+    ),new Cv(
+      3,
+      'Lacquehay',
+      'Laurie',
+      'Dev',
+      '12345',
+      20,
+      'rotating_card_profile.png'
     ),
   ];
   /**
