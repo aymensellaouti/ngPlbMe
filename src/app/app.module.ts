@@ -26,6 +26,7 @@ import { ExempleNgClassComponent } from './directives/exemple-ng-class/exemple-n
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipe/default-image.pipe';
+import { SayHelloService } from './services/say-hello.service';
 
 @NgModule({
   declarations: [
