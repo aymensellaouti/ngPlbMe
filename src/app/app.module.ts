@@ -23,6 +23,7 @@ import { WeekTodoComponent } from './todo/week-todo/week-todo.component';
 import { ExempleNgStyleComponent } from './directives/exemple-ng-style/exemple-ng-style.component';
 import { MiniWordComponent } from './directives/mini-word/mini-word.component';
 import { ExempleNgClassComponent } from './directives/exemple-ng-class/exemple-ng-class.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ExempleNgClassComponent } from './directives/exemple-ng-class/exemple-n
     WeekTodoComponent,
     ExempleNgStyleComponent,
     MiniWordComponent,
-    ExempleNgClassComponent
+    ExempleNgClassComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
