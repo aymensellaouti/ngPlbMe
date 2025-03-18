@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Todo } from "../model/todo";
 
 @Component({
   selector: 'app-todo',
@@ -7,5 +8,7 @@ import { Component } from "@angular/core";
 
 })
 export class TodoComponent {
+  todos: Todo[] = [];
+  todo = new Todo();
   constructor() {}
 }
