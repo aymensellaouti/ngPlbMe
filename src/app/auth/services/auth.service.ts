@@ -17,7 +17,6 @@ export interface ConnectedUser {
 })
 export class AuthService {
   http = inject(HttpClient);
-  authService = inject(AuthService);
 
   login(credentials: Credentials): Observable<LoginResonse> {
     // Todo: Appeler l'api avec les credentials et retourner un observable
@@ -27,7 +26,7 @@ export class AuthService {
   logout() {
     const headers = new HttpHeaders().set(
       APP_CONST.authHeaderKey,
-      this.authService.getToken()
+      this.getToken()
     );
     this.clearToken();
     return this.http.post(APP_API.logout, {}, {headers});
