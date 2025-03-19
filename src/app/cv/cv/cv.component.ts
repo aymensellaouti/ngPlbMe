@@ -28,12 +28,15 @@ export class CvComponent {
     this.sayHelloService.hello();
     this.loggerService.logger('cc je suis le cv Component');
     this.toastr.success('Bienvenu dans notre cvTech');
+    this.cvService.selectedCv$.subscribe({
+      next: cv => this.selectedCv = cv
+    });
   }
   /**
    * Représente le cv sélectionné
    */
   selectedCv: Cv | null = null;
-  onForwardCv(cv: Cv) {
-    this.selectedCv = cv;
-  }
+  // onForwardCv(cv: Cv) {
+  //   this.selectedCv = cv;
+  // }
 }
