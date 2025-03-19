@@ -11,6 +11,7 @@ import { NF404Component } from './components/nf404/nf404.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TestObservableComponent } from './rxjs/test-observable/test-observable.component';
 import { AddCvComponent } from './cv/add-cv/add-cv.component';
+import { authGuard } from './auth/guards/auth.guard';
 // cv
 const routes: Routes = [
   // { path: '**', component: NF404Component },
@@ -22,7 +23,7 @@ const routes: Routes = [
   { path: 'word', component: MiniWordComponent },
   { path: 'login', component: LoginComponent },
   { path: 'rxjs', component: TestObservableComponent },
-  { path: 'cv/add', component: AddCvComponent },
+  { path: 'cv/add', component: AddCvComponent, canActivate: [authGuard] },
   { path: 'cv/:id', component: DetailsCvComponent },
   { path: ':quelquechose/:name', component: SecondComponent },
   { path: '**', component: NF404Component },
