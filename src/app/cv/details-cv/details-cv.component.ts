@@ -40,8 +40,12 @@ export class DetailsCvComponent {
   }
   deleteCv() {
     if (this.cv) {
-      this.cvService.deleteCv(this.cv);
-      this.router.navigate([APP_ROUTES.cv]);
+      this.cvService.deleteCvByIdFromApi(this.cv.id).subscribe({
+        next: () => {
+          this.router.navigate([APP_ROUTES.cv]);
+        },
+        error: (e) => {console.log(e);}
+      });
     }
   }
 }

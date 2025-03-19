@@ -68,6 +68,10 @@ export class CvService {
     return this.http.get<Cv>(APP_API.cv + id);
   }
 
+  deleteCvByIdFromApi(id: number): Observable<{count: number}> {
+    return this.http.delete<{ count: number }>(APP_API.cv + id);
+  }
+
   /**
    *
    * Cherche un cv avec son id dans lai liste fictive de cvs
