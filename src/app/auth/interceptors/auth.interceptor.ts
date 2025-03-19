@@ -22,7 +22,7 @@ export class AuthInterceptor implements HttpInterceptor {
     Je vais vérifier si je suis authentifié ou pas
       1- Si authentifié => {
         Je clone la requete en y injectant notre token
-        JE renvoi le clone
+        Je renvoi le clone
       }
       2- Sinon je laisse passer ma requete
     */
