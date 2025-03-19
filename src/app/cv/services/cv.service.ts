@@ -1,6 +1,8 @@
-import {  Injectable } from '@angular/core';
+import {  inject, Injectable } from '@angular/core';
 import { Cv } from '../model/cv.model';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { APP_API } from 'src/app/config/app-api.config';
 
 
 @Injectable({
@@ -47,12 +49,23 @@ export class CvService {
   #selectCvSubject$ = new Subject<Cv>();
 
   selectedCv$ = this.#selectCvSubject$.asObservable();
+
+  http = inject(HttpClient);
   /**
    * Retourne la liste des cvs
    * @returns Cv[]
    */
   getCvs(): Cv[] {
     return this.cvs;
+  }
+
+  // Exposer une fonction qui va faire l'appel http récupérer la data et l'encapsuler dans un Observable
+  getCvsFromApi(): Observable<Cv[]> {
+    return this.http.get<Cv[]>(APP_API.cv);
+  }
+
+  getCvByIdFromApi(id: number): Observable<Cv> {
+    return this.http.get<Cv>(APP_API.cv + id);
   }
 
   /**

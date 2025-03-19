@@ -15,7 +15,7 @@ export class CvComponent {
   today = new Date();
   cvService = inject(CvService);
   toastr = inject(ToastrService);
-  cvs: Cv[] = this.cvService.getCvs();
+  cvs: Cv[] = [];
   loggerService = inject(LoggerService);
   //  Donne moi le sayHelloService
   sayHelloService = inject(SayHelloService);
@@ -31,6 +31,15 @@ export class CvComponent {
     this.cvService.selectedCv$.subscribe({
       next: cv => this.selectedCv = cv
     });
+    this.cvService.getCvsFromApi().subscribe({
+      next: (cvsFromApi) => {
+        this.cvs = cvsFromApi;
+      },
+      error: (error) => {
+        this.cvs = this.cvService.getCvs();
+        this.toastr.error("Faites attention les données sont fictives, veuillez contacter l'admin")
+      }
+    })
   }
   /**
    * Représente le cv sélectionné

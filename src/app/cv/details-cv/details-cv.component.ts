@@ -30,10 +30,13 @@ export class DetailsCvComponent {
   router = inject(Router);
   constructor() {
     const id = this.acr.snapshot.params['id'];
-    this.cv = this.cvService.findCvById(+id);
-    if (!this.cv) {
-      this.router.navigate([APP_ROUTES.cv]);
-    }
+    //this.cv = this.cvService.findCvById(+id);
+    this.cvService.getCvByIdFromApi(id).subscribe({
+      next: (cv) => this.cv = cv,
+      error: () => {
+        this.router.navigate([APP_ROUTES.cv]);
+      }
+    });
   }
   deleteCv() {
     if (this.cv) {
