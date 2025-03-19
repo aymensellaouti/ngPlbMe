@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -11,7 +13,6 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { ColorComponent } from './components/color/color.component';
 import { TwoComponent } from './components/two/two.component';
-import { FormsModule } from '@angular/forms';
 import { RotatingCardComponent } from './components/rotating-card/rotating-card.component';
 import { PereComponent } from './communicationInterComposants/pere/pere.component';
 import { FilsComponent } from './communicationInterComposants/fils/fils.component';
@@ -30,7 +31,6 @@ import { ExempleNgClassComponent } from './directives/exemple-ng-class/exemple-n
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipe/default-image.pipe';
-import { SayHelloService } from './services/say-hello.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './forms/test-form/test-form.component';
@@ -74,6 +74,7 @@ import { TestObservableComponent } from './rxjs/test-observable/test-observable.
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
