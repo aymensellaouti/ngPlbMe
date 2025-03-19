@@ -21,7 +21,9 @@ export class CvComponent {
   sayHelloService = inject(SayHelloService);
 
   //sayHelloService = new SayHelloService();
-  constructor() {
+  constructor(
+    // private cvService:CvService
+  ) {
     //private loggerService: LoggerService // Donne moi le LoggerService
     this.sayHelloService.hello();
     this.loggerService.logger('cc je suis le cv Component');
