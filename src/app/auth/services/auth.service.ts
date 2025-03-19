@@ -1,9 +1,10 @@
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable, Subject, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { LoginResonse } from '../dto/login-response.dto';
 import { Credentials } from '../dto/credentials.dto';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { APP_CONST } from 'src/app/config/constantes.config';
+import { APP_API } from 'src/app/config/app-api.config';
 
 
 export interface ConnectedUser {
@@ -16,16 +17,24 @@ export interface ConnectedUser {
 })
 export class AuthService {
   http = inject(HttpClient);
+  authService = inject(AuthService);
 
-  login(credentials: Credentials): Observable<LoginResonse> | null {
+  login(credentials: Credentials): Observable<LoginResonse> {
     // Todo: Appeler l'api avec les credentials et retourner un observable
-    return null;
+    return this.http.post<LoginResonse>(APP_API.login, credentials);
   }
 
-  logout() {}
+  logout() {
+    const headers = new HttpHeaders().set(
+      APP_CONST.authHeaderKey,
+      this.authService.getToken()
+    );
+    this.clearToken();
+    return this.http.post(APP_API.logout, {}, {headers});
+  }
 
   isAuthenticated(): boolean {
-    return true;
+    return !!this.getToken();
   }
 
   getToken(): string {
@@ -39,5 +48,4 @@ export class AuthService {
   saveToken(tokenValue: string): void {
     localStorage.setItem(APP_CONST.tokenKey, tokenValue);
   }
-
 }

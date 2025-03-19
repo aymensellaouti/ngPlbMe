@@ -22,8 +22,8 @@ const routes: Routes = [
   { path: 'word', component: MiniWordComponent },
   { path: 'login', component: LoginComponent },
   { path: 'rxjs', component: TestObservableComponent },
-  { path: 'cv/:id', component: DetailsCvComponent },
   { path: 'cv/add', component: AddCvComponent },
+  { path: 'cv/:id', component: DetailsCvComponent },
   { path: ':quelquechose/:name', component: SecondComponent },
   { path: '**', component: NF404Component },
 ];
