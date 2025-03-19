@@ -69,6 +69,7 @@ export class CvService {
   }
 
   deleteCvByIdFromApi(id: number): Observable<{count: number}> {
+    // Créer votre header ou params + l'ajouter notre requete
     return this.http.delete<{ count: number }>(APP_API.cv + id);
   }
 
